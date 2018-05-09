@@ -85,3 +85,67 @@ Driver list:
 ./media/platform/mxc/capture/ipu_fg_overlay_sdc.ko
 
 
+To be on the safe side, this is how I do it:
+
+
+On an empty Ubuntu 14.4 in the home directory:
+mkdir solo-build-alt
+git clone https://github.com/OpenSolo/solo-builder
+sudo ln -s /home/vagrant/solo-builder/ /vagrant
+sudo ln -s /home/vagrant/solo-build-alt/ /solo-build-alt
+cd ./solo-builder
+sudo apt-get install gawk chrpath
+sudo apt-get install texinfo
+./builder.sh 
+DONE !
+
+Build Solo Single code:
+cd solo-build-alt/
+export MACHINE=imx6solo-3dr-1080p
+EULA=1 source ./setup-environment build
+bitbake -c devshell virtual/kernel
+
+... You now got a buld shell ...
+
+cd ./tmp-eglibc/work/imx6solo_3dr_1080p-oe-linux-gnueabi/linux-imx/3.10.17-r0/git
+make menuconfig 
+    change whant you need
+make modules
+
+PS: If you change anything outside the modules you must rebuld the entire kernel.
+That will set you back days as then you need to use the bitbake/yocto methods to get is all right.
+Rebuld the enfire file system and reflas the SD card using dd or similar...
+
+To make custom made modules:
+
+make M=/home/user/my_module modules
+
+Given that you got the Makefile and soruce code right:
+
+in the Makefile:  
+obj-m += my_module.o
+
+in the my_module.c:
+#include <linux/module.h>
+#include <linux/init.h>
+#include <linux/kernel.h>
+
+static int __init my_init(void)
+{
+    printk(KERN_INFO "hello, my module\n");
+    return 0;
+}
+
+static void __exit my_exit(void)
+{
+    printk(KERN_INFO "good bye, my module\n" );
+}
+
+module_init(my_init);
+module_exit(my_exit);
+
+MODULE_LICENSE("Dual BSD/GPL");
+MODULE_AUTHOR("F.B.");
+MODULE_DESCRIPTION("My First Driver");
+
+
