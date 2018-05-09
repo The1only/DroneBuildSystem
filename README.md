@@ -88,7 +88,7 @@ Driver list:
 To be on the safe side, this is how I do it:
 
 
-On an empty Ubuntu 14.4 in the home directory:
+On an empty Ubuntu 14.4 in the home directory of the user vagrant:
 mkdir solo-build-alt
 git clone https://github.com/OpenSolo/solo-builder
 sudo ln -s /home/vagrant/solo-builder/ /vagrant
