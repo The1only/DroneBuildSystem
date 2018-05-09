@@ -49,4 +49,4 @@ How:
 	There are several ways to do this, maybe the best is to use the g_mulit parameters.
 
 
-I also got the pl2303 driver should any one need on, this will enable some Arduino boards and other utilities etc. that uses the Profillic USB solution.
+I also got the pl2303 driver should any one need on, this will enable some Arduino boards and other utilities etc. that uses the Prolific USB solution.
