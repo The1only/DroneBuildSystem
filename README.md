@@ -89,6 +89,8 @@ To be on the safe side, this is how I do it:
 
 
 On an empty Ubuntu 14.4 in the home directory of the user vagrant:
+( I do not use vagrant, it just saved me time to have a user with that name as then all scripts run by default.)
+
 mkdir solo-build-alt
 git clone https://github.com/OpenSolo/solo-builder
 sudo ln -s /home/vagrant/solo-builder/ /vagrant
