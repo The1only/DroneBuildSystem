@@ -50,3 +50,38 @@ How:
 
 
 I also got the pl2303 driver should any one need on, this will enable some Arduino boards and other utilities etc. that uses the Prolific USB solution.
+
+Driver list:
+
+./usb/serial/zte_ev.ko
+./usb/serial/usb_wwan.ko
+./usb/serial/ftdi_sio.ko
+./usb/serial/pl2303.ko
+./usb/serial/option.ko
+./usb/serial/usbserial.ko
+./usb/gadget/g_ether.ko
+./usb/gadget/g_webcam.ko
+./usb/gadget/g_acm_ms.ko
+./usb/gadget/usb_f_acm.ko
+./usb/gadget/libcomposite.ko
+./usb/gadget/g_multi.ko
+./usb/gadget/u_serial.ko
+./usb/class/cdc-acm.ko
+./usb/class/cdc-wdm.ko
+./mxc/mlb/mxc_mlb150.ko
+./i2c/algos/i2c-algo-pcf.ko
+./i2c/algos/i2c-algo-pca.ko
+./media/v4l2-core/videobuf2-memops.ko
+./media/v4l2-core/videobuf2-vmalloc.ko
+./media/v4l2-core/videobuf2-core.ko
+./media/platform/mxc/capture/ipu_bg_overlay_sdc.ko
+./media/platform/mxc/capture/fsl_csi.ko
+./media/platform/mxc/capture/ipu_still.ko
+./media/platform/mxc/capture/adv7610_video.ko
+./media/platform/mxc/capture/csi_v4l2_capture.ko
+./media/platform/mxc/capture/ipu_prp_enc.ko
+./media/platform/mxc/capture/ipu_csi_enc.ko
+./media/platform/mxc/capture/mxc_v4l2_capture.ko
+./media/platform/mxc/capture/ipu_fg_overlay_sdc.ko
+
+
