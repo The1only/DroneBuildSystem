@@ -145,7 +145,7 @@ module_init(my_init);
 module_exit(my_exit);
 
 MODULE_LICENSE("Dual BSD/GPL");
-MODULE_AUTHOR("F.B.");
+MODULE_AUTHOR("T.N.");
 MODULE_DESCRIPTION("My First Driver");
 
 
