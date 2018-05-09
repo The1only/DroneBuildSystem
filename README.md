@@ -114,9 +114,9 @@ make modules
 
 PS: If you change anything outside the modules you must rebuld the entire kernel.
 That will set you back days as then you need to use the bitbake/yocto methods to get is all right.
-Rebuld the enfire file system and reflas the SD card using dd or similar...
+Rebuld the enfire file system and reflash the SD card using dd or similar...
 
-To make custom made modules:
+To make custom make modules:
 
 make M=/home/user/my_module modules
 
